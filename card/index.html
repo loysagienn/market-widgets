@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Карточный виджет</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css" />
+    <script async src="https://widgets.delivery.yandex.ru/script/api"></script>
+    <script>
+        (function () {
+            function failureWidgetLoad(error) {
+                // Эта функция будет вызвана, если виджет не сможет создаться.
+
+                console.error(error);
+
+                document.getElementById('container').innerHTML = 'Произошла ошибка при загрузке виджета'
+            }
+
+            function successWidgetLoad(widget) {
+                console.log('widget load success')
+            }
+            
+            function startWidget() {
+                window.removeEventListener('YaDeliveryLoad', startWidget);
+
+                window.YaDelivery.createWidget({
+                    containerId: 'container',
+                    type: 'deliveryCard',
+                    params: {
+                        senderId: 43,
+                        apiKey: '757d4f56-9826-4ed6-86d5-617d23a6f84a',
+                        dimensions: {
+                            width: 10,
+                            height: 10,
+                            length: 10,
+                            weight: 1,
+                        }
+                    },
+                }).then(successWidgetLoad).catch(failureWidgetLoad);
+            }
+
+            window.YaDelivery
+                ? startWidget()
+                : window.addEventListener('YaDeliveryLoad', startWidget);
+
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="widget-wrapper">
+        <div id="container" class="card-container">
+            Загрузка виджета...<br />
+            Может быть долгой, потому что грузятся варианты доставки.<br />
+            Возможно стоит сначала рисовать виджет со спиннером, а потом уже с клиента подгружать
+            варианты доставки
+        </div>
+    </div>
+</body>
+
+</html>

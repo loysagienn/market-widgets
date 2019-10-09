@@ -1,0 +1,299 @@
+html, body {
+    font-family: 'YS Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+
+    background-color: #fbfbfb;
+
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+h1, h2, h3, p, span, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    font-size: 16px;
+
+    background: none;
+
+    border: none;
+
+    outline: none;
+}
+
+input {
+    background: none;
+
+    border: none;
+
+    outline: none;
+}
+
+h2 {
+    width: 100%;
+    max-width: 512px;
+
+    margin: 8px 0;
+    margin-left: 20px;
+}
+
+.logo
+{
+    background-color: #ffffff;
+    background-image: url('./icons/logo.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 4px;
+
+    width: 256px;
+    height: 64px;
+
+    margin-top: 36px;
+    margin-bottom: 24px;
+
+    transform: translateY(0);
+
+    transition: box-shadow 500ms ease, transform 500ms ease;
+
+    will-change: box-shadow;
+}
+
+.page {
+    background-color: #fbfbfb;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 16px;
+}
+
+.popup
+{
+    display: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    margin: 16px;
+    padding: 12px 16px;
+
+    box-shadow: 0 4px 16px #cccccc;
+}
+
+.products {
+    background-color: #ffffff;
+
+    border-radius: 8px;
+
+    max-width: 512px;
+    width: 100%;
+
+    margin-bottom: 16px;
+    padding: 8px;
+
+    box-shadow: 0 4px 16px #dedede;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+
+    padding: 16px 8px;
+}
+
+.product + .product {
+    border-top: 1px solid #e5e5e5;
+}
+
+.product .section {
+    /*  */
+}
+
+.product .section:last-child {
+    margin-left: 16px;
+}
+
+.product .section img {
+    width: 64px;
+    height: 64px;
+
+    object-fit: contain;
+}
+
+.product .section .name {
+    display: block;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product .section .name span {
+    font-size: 14px;
+
+    opacity: 0.75;
+}
+
+.product .section .price {
+    display: inline-block;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    background-color: #000000;
+
+    border-radius: 4px;
+
+    padding: 4px 16px;
+
+    color: #ffffff;
+
+    margin-top: 8px;
+}
+
+.form {
+    background-color: #ffffff;
+    
+    border-radius: 8px;
+
+    max-width: 512px;
+    width: 100%;
+
+    margin-bottom: 32px;
+    padding: 8px;
+
+    box-shadow: 0 4px 16px #dedede;
+}
+
+.form .section {
+    /*  */
+}
+
+.form .section + .section {
+    margin-top: 12px;
+}
+
+.section label {
+    display: inline-block;
+
+    font-size: 14px;
+    line-height: 20px;
+
+    color: rgba(0, 0, 0, 0.33);
+
+    margin-left: 12px;
+    margin-bottom: 4px;
+}
+
+.section input {
+    font-size: 14px;
+    line-height: 20px;
+
+    background-color: #ffffff;
+
+    border: thin solid #cccccc;
+    border-radius: 4px;
+
+    width: 100%;
+
+    margin: 1px;
+    padding: 8px 12px;
+
+    box-sizing: border-box;
+}
+
+.section input:focus {
+    border: 2px solid #f5c400;
+
+    margin: 0;
+}
+
+.deliverySelector {
+    display: flex;
+
+    margin: 12px 0;
+}
+
+.deliverySelector .deliveryOption {
+    background-color: #cccccc;
+
+    border-radius: 4px;
+
+    width: 100%;
+
+    padding: 16px;
+
+    cursor: pointer;
+    
+    text-align: center;
+}
+
+.deliverySelector .deliveryOption + .deliveryOption {
+    margin-left: 4px;
+}
+
+.deliveryOption.deliveryByShop {
+    background-color: #ffffff;
+
+    border: thin solid #cccccc;
+
+    color: #000000;
+}
+
+.deliveryOption.deliveryByShop:hover {
+    background-color: #f9f9f9;
+}
+
+.deliveryOption.deliveryByYandex {
+    background-color: #f5c400;
+
+    color: #000000;
+}
+
+.deliveryOption.deliveryByYandex:hover {
+    opacity: 0.8;
+}
+
+.submitButtonSection {
+    margin-top: 12px;
+}
+
+.submitButtonSection .submitButton {
+    background-color: #000000;
+
+    border-radius: 4px;
+
+    width: 100%;
+
+    padding: 16px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.submitButtonSection .submitButton:hover {
+    opacity: 0.9;
+}

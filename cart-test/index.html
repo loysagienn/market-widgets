@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Yandex.Delivery Cart Widget</title>
+
+    <link href="./styles.css" type="text/css" rel="stylesheet">
+    <link href="./suggest.css" type="text/css" rel="stylesheet">
+
+    <script src="https://widgets.delivery.tst.market.yandex.ru/script/api"></script>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="logo"></div>
+
+            <h2>Корзина</h2>
+            <div class="products"></div>
+
+            <h2>Данные</h2>
+            <form class="form" id="checkout">
+                <div class="section">
+                    <label>Фамилия</label>
+                    <input class="textfield" id="lastName" type="text" name="lastname" value="Локьяев">
+                </div>
+
+                <div class="section">
+                    <label>Имя</label>
+                    <input class="textfield" id="firstName" type="text" name="firstname" value="Тамерлан">
+                </div>
+
+                <div class="section">
+                    <label>Телефон</label>
+                    <input class="textfield" id="phone" type="text" name="phone" value="+7 (928) 708-82-65">
+                </div>
+
+                <div class="section">
+                    <label>E-Mail</label>
+                    <input class="textfield" id="email" type="text" name="email" value="hello@Tamik.ru">
+                </div>
+
+                <div class="section">
+                    <label>Город</label>
+                    <input class="textfield" id="locality" type="text" name="city" value="" autocomplete="off">
+                </div>
+
+                <div class="section">
+                    <label>Адрес</label>
+                    <input class="textfield" id="street" type="text" name="address" value="Непалимский переулок 5">
+                </div>
+
+                <div class="deliverySelector">
+                    <button type="button" class="deliveryOption deliveryByShop" id="shopDelivery">
+                        Доставка магазина
+                    </button>
+
+                    <button type="button" class="deliveryOption deliveryByYandex" id="yaDelivery">
+                        Яндекс.Доставка
+                    </button>
+                </div>
+
+                <div class="submitButtonSection">
+                    <button type="submit" class="submitButton">
+                        Заказать
+                    </button>
+                </div>
+            </form>
+
+            <div id="deliveryCart"></div>
+        </div>
+    </div>
+
+    <div class="popup"></div>
+
+    <script src="./dom.js"></script>
+    <script src="./suggest.js"></script>
+    <script src="./widget.js"></script>
+</body>
+</html>
